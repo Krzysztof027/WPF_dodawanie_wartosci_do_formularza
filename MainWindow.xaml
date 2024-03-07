@@ -1,0 +1,51 @@
+﻿<Window x:Class="WpfApp2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2"
+        mc:Ignorable="d"
+        Title="Przegladarka notatek" Height="450" Width="800">
+    <UniformGrid Columns="2">
+        <TextBlock 
+            FontWeight="Bold"
+            HorizontalAlignment="Center">
+            Tytuł</TextBlock>
+
+        <TextBlock
+        x:Name="tytul_text_notatki">
+            Jakiś wstępny tytuł notatki
+        </TextBlock>
+
+        <TextBlock FontWeight="Bold"
+        HorizontalAlignment="Center">
+            Tresc
+        </TextBlock>
+
+        <TextBlock x:Name="tresc_text_block">
+            Jakaś treść
+        </TextBlock>
+
+        <Button Margin="30"
+                Background="SteelBlue" 
+                Foreground="White"
+                Click="Button_Wstecz_Click">Poprzednia 
+            notatka</Button>
+        <Button Margin="30"
+                Background="SteelBlue" 
+                Foreground="White"
+                Click="Button_Dalej_Click">
+            Następna notatka</Button>
+
+        <StackPanel Visibility="Hidden">
+            <TextBlock>Podaj tytuł</TextBlock>
+            <TextBox x:Name="tytul_text_box"></TextBox>
+            <TextBlock>Podaj tekst</TextBlock>
+            <TextBox x:Name="tresc_text_box"></TextBox>
+            <Button Click="Button_Click_1">Dodaj</Button>
+        </StackPanel>
+        <Button Margin="30" Background="SteelBlue" Foreground="White">
+            Dodaj nową notatkę
+        </Button>
+    </UniformGrid>
+</Window>
