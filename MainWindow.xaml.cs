@@ -46,7 +46,7 @@ namespace WpfApp2
 
         private void odczytNotatek()
         {
-            StreamReader sr = new StreamReader("Notatka.txt");//Zaznaczyć we własnościach
+            StreamReader sr = new StreamReader("Notatka.txt");//Zaznaczyć we właśćiwościach i zaznaczyć "zawsze kopiuj"
             string tytul = "";
             string tresc = "";
 
@@ -66,7 +66,7 @@ namespace WpfApp2
         private void WyswietlNotatke(int i)
         {
             tresc_text_block.Text = Notatki[i].Tytul;//zmienna lokalna -potem licznik
-            tresc_text_block.Text = Notatki[i].Tresc;
+            tytul_text_notatki.Text = Notatki[i].Tresc;
         }
 
         private void Button_Wstecz_Click(object sender, RoutedEventArgs e)
@@ -93,6 +93,7 @@ namespace WpfApp2
         }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            //tytul_text_box,  tresc_text_box
             string tytulNotatki = tytul_text_box.Text;//tytul_text_notatki
             string trescNotatki = tresc_text_box.Text;
             Notatki.Add(new Notatka(tytulNotatki, trescNotatki));

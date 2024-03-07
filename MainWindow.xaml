@@ -37,7 +37,7 @@
                 Click="Button_Dalej_Click">
             Następna notatka</Button>
 
-        <StackPanel Visibility="Hidden">
+        <StackPanel>
             <TextBlock>Podaj tytuł</TextBlock>
             <TextBox x:Name="tytul_text_box"></TextBox>
             <TextBlock>Podaj tekst</TextBlock>
